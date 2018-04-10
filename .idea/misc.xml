@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.3.9-bin/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.3.9-bin\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.7" />
+  </component>
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="eaddce56-c388-49cc-8a92-6b441633bd3d" />
+      <option name="name" value="eaddce56-c388-49cc-8a92-6b441633bd3d" />
+      <option name="url" value="http://60.174.249.206:7000/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="0c40745c-cde1-4557-bfca-9a4ce30db893" />
+      <option name="name" value="0c40745c-cde1-4557-bfca-9a4ce30db893" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ab7492a2-d103-452d-9dea-2464fe6f93ee" />
+      <option name="name" value="ab7492a2-d103-452d-9dea-2464fe6f93ee" />
+      <option name="url" value="http://mvnrepository.com/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="96811003-27ec-47cd-a30b-e8bccc6730b4" />
+      <option name="name" value="96811003-27ec-47cd-a30b-e8bccc6730b4" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/repositories/central/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="c2cae35e-26d0-4b79-a6ae-cca1f3aaadf9" />
+      <option name="name" value="c2cae35e-26d0-4b79-a6ae-cca1f3aaadf9" />
+      <option name="url" value="http://repo2.maven.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="06a7189a-d8fa-4f86-8c6c-b05a547a93c7" />
+      <option name="name" value="06a7189a-d8fa-4f86-8c6c-b05a547a93c7" />
+      <option name="url" value="http://mirrors.ibiblio.org/pub/mirrors/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="78a0ca7f-041b-474a-a739-14c445e965d9" />
+      <option name="name" value="78a0ca7f-041b-474a-a739-14c445e965d9" />
+      <option name="url" value="http://repository.jboss.org/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="d2fb08d4-7110-4dc4-aa60-8f6faba90189" />
+      <option name="name" value="d2fb08d4-7110-4dc4-aa60-8f6faba90189" />
+      <option name="url" value="http://maven.net.cn/content/groups/public/" />
+    </remote-repository>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\73703\AppData\Roaming\Subversion</configuration>
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="true" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
