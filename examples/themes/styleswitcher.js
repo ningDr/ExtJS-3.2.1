@@ -12,6 +12,10 @@ function setActiveStyleSheet(title) {
     for (i = 0; i < len; i++) {
         a = links[i];
         if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+<<<<<<< HEAD
+=======
+            // 通过把link标签的disabled属性修改为true或false，以禁用或启用css样式
+>>>>>>> 206311a2e165407875fc509bcdeaaefe1a33fa48
             a.disabled = true;
             if (a.getAttribute("title") == title) a.disabled = false;
         }
