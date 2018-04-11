@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>arguments</title>
 </head>
 <body>
-$END$
+    <script language="JavaScript">
+        // 动态参数
+        // function main(arg1, arg2) {
+        //     alert(arg1+'---'+arg2);
+        // }
+        // main();
+        // main(1);
+        // main(1, 2);
+        // main(1, 2, 3);
+        // function test() {
+        //     // 动态参数
+        //     alert('arguments.length='+arguments.length);
+        // }
+        // test();
+        // test(1,2,3,4,5,6)
+        // com = {
+        //     momo: {
+        //         test: {
+        //             fn: function(){
+        //                 alert("for test");
+        //             }
+        //         }
+        //     }
+        // };
+        function ns(pkg) {
+            if (!pkg) {
+                return null;
+            }
+            var arr = pkg.split(".");
+            var o = window[arr[0]] = window[arr[0]] || {};
+            // 对象赋值，传递的是对象的地址
+            var result = o;
+            var len =arr.length;
+            for (var i = 1; i < len; i++){
+                o = o[arr[i]] = o[arr[i]] || {};
+            }
+            return result;
+        }
+        ns("com.momo.test");
+        com.momo.test.fn = function () {
+            alert("for test");
+        };
+        ns("com.momo.test");
+        alert(com.momo.test.fn);
+    </script>
 </body>
 </html>

@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>SelfCSSPanel</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+    <script type="text/javascript" src="../../ext-all.js"></script>
 </head>
 <body>
-$END$
+    <style type="text/css">
+        .my-panel {
+            border: 0 solid #99bbe8;
+        }
+
+        .my-panel-header {
+            background: url("../../resources/images/access/panel/white-top-bottom.gif") repeat-x scroll 0 -1px transparent;
+            border: 1px solid #99bbe8;
+            color: #15428B;
+            font: bold 11px/15px tahoma, arial, verdana, sans-serif;
+            overflow: hidden;
+            padding: 5px 3px 4px 5px;
+        }
+        .my-panel-bwrap {
+            left: 0;
+            overflow: hidden;
+            top: 0;
+        }
+        .my-panel-body {
+            background: none repeat scroll 0 0 white;
+            border-color: -moz-use-text-color;
+            border-right: 1px solid #99bbe8;
+            border-style: none solid solid;
+            border-width: 0 1px 1px;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+    <script type="text/javascript">
+        function apply(tar, src) {
+            for (var p in src){
+                tar[p] = src[p];
+            }
+        }
+        function createDiv(config) {
+            var div = document.createElement('div');
+            div.className = config.cls;
+            delete config.cls;
+            apply(div.style, config);
+            return div;
+        }
+        var outerDiv = createDiv({
+            width: 400,
+            height: 300,
+            cls: "my-panel"
+        });
+        var headerDiv = createDiv({
+            cls: "my-panel-header"
+        });
+        headerDiv.innerHTML = "<span>这是自己的Panel，纯脚本创建处理</span>";
+        var bodyWrapDiv = createDiv({
+            cls: "my-panel-bwrap"
+        });
+        var bodyDiv = createDiv({
+            width: 398,
+            height: 273,
+            cls: "my-panel-body"
+        });
+        bodyWrapDiv.appendChild(bodyDiv);
+        outerDiv.appendChild(headerDiv);
+        outerDiv.appendChild(bodyWrapDiv);
+        document.body.appendChild(outerDiv);
+    </script>
+
 </body>
 </html>
