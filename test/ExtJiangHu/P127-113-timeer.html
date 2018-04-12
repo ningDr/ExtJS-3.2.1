@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timer</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+    <script type="text/javascript" src="../../ext-all.js"></script>
+</head>
+<body>
+    <div id="timer1"></div>
+    <div id="timer2" ></div>
+    <div id="userName" ></div>
+    <div id="createCallback" ></div>
+    <script type="text/javascript">
+        // 方式1：
+        var fn = function(){
+            var d = new Date();
+            document.getElementById("timer1").innerHTML = d.toLocaleString();
+        };
+        // fn作为函数指针传递给setTimeout
+        // window.setTimeout(fn, 3000);
+        window.setInterval(fn, 1000);
+        // 方式2： 函数体直接作为参数
+        window.setInterval(function () {
+            var d = new Date();
+//            document.body.innerHTML = d.toLocaleString();
+            document.getElementById("timer2").innerHTML = d.toLocaleString();
+        }, 2000);
+//============================================================
+        var fn = function (userName) {
+            var d = new Date();
+            document.getElementById("userName").innerHTML = userName + "====="+d.toLocaleString();
+        }
+        window.setInterval(function () {
+            // 函数指针传参
+            fn("大漠穷秋");
+        }, 1000);
+//=============================================================
+        var createCallback = function (fn, args) {
+            return function () {
+                fn.call(window, args);
+            }
+        };
+        var fn1 = function (userName) {
+            var d = new Date();
+            document.getElementById("createCallback").innerHTML = userName +"=="+ d.toLocaleString();
+        };
+        window.setInterval(createCallback(fn1, '回调函数'));
+    </script>
+
+</body>
+</html>

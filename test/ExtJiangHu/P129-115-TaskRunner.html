@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskRunner</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+    <script type="text/javascript" src="../../ext-all.js"></script>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script type="text/javascript">
+        var updateClock = function () {
+            Ext.fly('clock').update(new Date().format('g:i:s A'));
+        };
+        var task = {
+            run: updateClock,
+            interval: 1000
+        };
+        var runner = new Ext.util.TaskRunner();
+        runner.start(task);
+    </script>
+</body>
+</html>

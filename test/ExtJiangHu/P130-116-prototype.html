@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototype</title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/ext-all.css"/>
+    <!-- GC -->
+    <!-- LIBS -->
+    <script type="text/javascript" src="../../adapter/ext/ext-base.js"></script>
+    <!-- ENDLIBS -->
+    <script type="text/javascript" src="../../ext-all.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+//        var obj = {};
+//        alert("obj.prototype="+obj.prototype);
+//        // obj通过构造函数Object构造出来
+//        alert("obj.constructor="+obj.constructor);
+//
+//        var fn = function () {};
+//        alert("fn.prototype="+fn.prototype);
+//        alert("fn.prototype.constructor="+fn.prototype.constructor);
+//        alert("fn.constructor="+fn.constructor);
+        // 向prototype添加自定义属性
+//        Animal = function (name) {
+//            this.name = name;
+//        };
+//        Animal.prototype.sayHello = function () {
+//            alert("你好，我是"+this.name);
+//        };
+//        var a1 = new Animal("动物1");
+//        a1.sayHello();
+//        var a2 = new Animal("动物2");
+//        a2.sayHello();
+//        a1.sayHello();
+       /**原型查找机制：
+        * 如果从实例对象上没有找到指定的属性
+        * 那么就尝试从它构造函数的prototype对象上去找
+        * 如果还找不到，继续找prototype对象构造函数的prototype
+        * 如果这个过程中找到了需要的属性，立即返回
+        * 否则，一直到脚本返回null为止
+        */
+        Animal = function (name) {
+            this.name = name;
+        };
+        // sayHello函数存储在Animal.prototype上
+        // 并不是每个Animal的实例上都拥有一份sayHello函数的副本
+        Animal.prototype.sayHello = function () {
+            alert("你好，我是"+this.name);
+        };
+        var a1 = new Animal("动物1");
+        a1.sayHello();
+
+    </script>
+</body>
+</html>
